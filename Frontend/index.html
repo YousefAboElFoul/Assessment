@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Web App</title>
+</head>
+<body>
+    <h1>Data from Database</h1>
+    <ul id="data-list"></ul>
+    <input type="text" id="data-input" placeholder="Add data">
+    <button id="add-button">Add</button>
+
+    <script>
+        const dataList = document.getElementById('data-list');
+        const dataInput = document.getElementById('data-input');
+        const addButton = document.getElementById('add-button');
+
+        function fetchData() {
+            fetch('/api/data')
+                .then(response => response.json())
+                .then(data => {
+                    dataList.innerHTML = data.map(item => `<li>${item.text}</li>`).join('');
+                });
+        }
+
+        addButton.addEventListener('click', () => {
+            fetch('/api/data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ text: dataInput.value })
+            }).then(() => {
+                dataInput.value = '';
+                fetchData();
+            });
+        });
+
+        fetchData();
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+backend:
+  mysqlHost: mysql-host
+  secretName:  mysql-secret
+  replicaCount: 1
+  image:
+    repository: docker.io/yousefaboelfoul/backend
+    tag: 1.0.0
+frontend:
+  replicaCount: 1
+  image:
+    repository: docker.io/yousefaboelfoul/frontend
+    tag: 1.0.0
+mysql:
+  replicaCount: 1
+  secretName: mysql-secret

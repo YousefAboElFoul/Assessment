@@ -1,0 +1,5 @@
+name: myapp
+apiVersion: v2
+description: assessment
+version: 1.0.0
+icon: https://example.com/test.png

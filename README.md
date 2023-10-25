@@ -16,13 +16,23 @@ In the docker compose , the backend and frontend files have Dockerfiles that are
 In the directory Assessment/Helm:
 1. helm lint
 2. helm install myapp ../Helm -f values.yaml 
-TO BE DONE: ADD documentation
-- I pushed my docker images to an online repository which is mine on dockerhub
+
+
+- I pushed my docker images to an online repository which is mine on dockerhub 
 - I am using images that i deployed previously here one for the frontend and one for the backend
+- In addition , i am using minikube setup ,with docker desktop , helm and wsl.
 - To verify that the chart is working you can use : helm lint
 the ouput should be 
 /Assessment/Helm$ helm lint
 ==> Linting .
 
 1 chart(s) linted, 0 chart(s) failed
+-  helm install myapp ../Helm -f values.yaml
+NAME: myapp
+LAST DEPLOYED: Wed Oct 25 15:27:13 2023
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+- to check if everything is up and running -> kubectl get pods -n default
 

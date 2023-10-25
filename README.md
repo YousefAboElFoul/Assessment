@@ -2,13 +2,17 @@
 --------------------------------------------------------------
 The project is for both Task A and Task B
 --------------------------------------------------------------
-For Task A , 
+# Task A
+
 In the directory Assessment:
 it could be simply run via using the command line
 the command to run is : docker compose up 
-TO BE DONE: ADD documentation
+So I have the docker compose file , in the docker compose file I define the mysql db with ports , username and password.
+In the docker compose , the backend and frontend files have Dockerfiles that are ran on execution
+
 --------------------------------------------------------------
-For Task B , 
+# Task B 
+
 In the directory Assessment/Helm:
 1. helm lint
 2. helm install myapp ../Helm -f values.yaml 

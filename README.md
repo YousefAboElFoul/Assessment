@@ -10,6 +10,10 @@ the command to run is : docker compose up
 So I have the docker compose file , in the docker compose file I define the mysql db with ports , username and password.
 In the docker compose , the backend and frontend files have Dockerfiles that are ran on execution
 
+Steps to run:
+1- docker compose build
+2- docker compose up
+
 --------------------------------------------------------------
 # Task B 
 
@@ -35,4 +39,9 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 - to check if everything is up and running -> kubectl get pods -n default
+
+
+myapp-backend-deployment-6c5d76785b-p5n5w    1/1     Running   0          29s
+myapp-frontend-deployment-864b79bb6c-65hmw   1/1     Running   0          29s
+myapp-mysql-deployment-7657fbf6f-gx5zg       1/1     Running   0          29s
 

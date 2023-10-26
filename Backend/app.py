@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_mysqldb import MySQL
 
-app = Flask(__name)
+app = Flask(__name__)
 
 
 app.config['MYSQL_USER'] = 'root'
@@ -27,5 +27,5 @@ def add_data():
     cursor.close()
     return 'Data added'
 
-if __name__ == '__main__':
+if __name__=='__main__':
     app.run(host='0.0.0.0', port=3000)
